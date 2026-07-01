@@ -1,0 +1,6 @@
+# Allow non-root libusb access to the NI GPIB-USB-HS on Linux.
+# Install:
+#   sudo cp udev/99-ni-gpib-usb-hs.rules /etc/udev/rules.d/
+#   sudo udevadm control --reload-rules && sudo udevadm trigger
+# (add yourself to the "plugdev" group if you are not already a member)
+SUBSYSTEM=="usb", ATTR{idVendor}=="3923", ATTR{idProduct}=="709b", MODE="0660", GROUP="plugdev"

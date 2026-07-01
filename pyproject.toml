@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ni-gpib-usb-hs"
+version = "0.1.0"
+description = "Pure-Python user-space driver for the NI GPIB-USB-HS adapter (with an Agilent/Keysight 34401A wrapper). No NI-488.2, no linux-gpib, no kernel module — works on macOS/Apple Silicon and Linux."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "GPL-2.0-only" }
+authors = [{ name = "Edward Viaene" }]
+keywords = ["gpib", "ni-gpib-usb-hs", "gpib-usb-hs", "agilent", "keysight",
+            "34401a", "scpi", "instrument-control", "test-equipment", "pyusb",
+            "libusb", "multimeter", "dmm"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+]
+dependencies = ["pyusb>=1.2"]
+
+[project.urls]
+Homepage = "https://github.com/embeddedci-com/ni-gpib-usb-hs"
+Repository = "https://github.com/embeddedci-com/ni-gpib-usb-hs"
+Issues = "https://github.com/embeddedci-com/ni-gpib-usb-hs/issues"
+
+[tool.setuptools]
+packages = ["ni_gpib_usb_hs"]
